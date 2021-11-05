@@ -39,7 +39,7 @@ public class ClientAndOrderBehaviourTest {
         Long clientId = faker.random().nextLong() * 1;
         List<Orders> orders = clientsService.findAllOrders(clientId);
 
-        Assertions.assertTrue(orders.isEmpty());
+        Assertions.assertTrue(!orders.isEmpty());
     }
 
     @Test
