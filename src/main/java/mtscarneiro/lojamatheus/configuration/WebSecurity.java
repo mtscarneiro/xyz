@@ -52,12 +52,10 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                     .loginProcessingUrl("/perform_login")
                     .defaultSuccessUrl("/homepage.html", true)
                     .failureUrl("/login.html?error=true")
-                    .failureHandler(authenticationFailureHandler())
                     .and()
                     .logout()
                     .logoutUrl("/perform_logout")
-                    .deleteCookies("JSESSIONID")
-                    .logoutSuccessHandler(logoutSuccessHandler());
+                    .deleteCookies("JSESSIONID");
     }
 }
 
